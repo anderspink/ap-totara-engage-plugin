@@ -1,0 +1,26 @@
+type engage_anderspink_api_articles {
+    id: Int
+    api_id: Int
+    teamid: Int
+    title: String
+    content: String
+    image: String
+    date_published: String
+    url: String
+    author: String,
+    domain: String,
+    reading_time: Int
+}
+
+extend type Query {
+    engage_anderspink_get_api_article(
+        apiid: param_integer
+    ): engage_anderspink_api_articles
+
+    engage_anderspink_get_api_articles(
+        teamid: param_integer,
+        typeid: param_integer,
+        type: param_text,
+        page: param_integer
+    ): [engage_anderspink_api_articles!]!
+}

@@ -1,0 +1,9 @@
+query container_anderspink_get_apis {
+    apis: container_anderspink_get_apis {
+        id
+        api_key(format: PLAIN)
+        team_name(format: PLAIN)
+        timecreated
+        timemodified
+    }
+}

@@ -1,0 +1,3 @@
+mutation engage_anderspink_delete_article($id: param_integer!) {
+    article: engage_anderspink_delete_article (id: $id)
+}

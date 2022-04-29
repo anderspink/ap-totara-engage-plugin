@@ -1,0 +1,11 @@
+query container_anderspink_get_workspace_briefing_bridges {
+    bridges: container_anderspink_get_workspace_briefing_bridges {
+        workspaceid
+        workspace_name
+        teamid
+        team_name
+        type_name
+        bridge_type
+        id
+    }
+}

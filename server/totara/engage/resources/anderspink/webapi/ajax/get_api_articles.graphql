@@ -1,0 +1,22 @@
+query engage_anderspink_get_api_articles(
+    $teamid: param_integer!,
+    $typeid: param_integer!,
+    $type: param_text!,
+    $page: param_integer
+) {
+    articles: engage_anderspink_get_api_articles(
+        teamid: $teamid,
+        typeid: $typeid,
+        type: $type,
+        page: $page
+    ){
+        api_id
+        title
+        content
+        image
+        url
+        reading_time
+        domain
+        date_published
+    }
+}

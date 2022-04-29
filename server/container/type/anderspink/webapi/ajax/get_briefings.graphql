@@ -1,0 +1,9 @@
+query container_anderspink_get_briefings($teamid: param_integer) {
+    briefings: container_anderspink_get_briefings(teamid: $teamid) {
+        apiid
+        team
+        name
+        type
+        img
+    }
+}

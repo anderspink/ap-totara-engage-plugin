@@ -1,0 +1,9 @@
+query container_anderspink_get_boards($teamid: param_integer) {
+    boards: container_anderspink_get_boards(teamid: $teamid) {
+        apiid
+        team
+        name
+        type
+        img
+    }
+}

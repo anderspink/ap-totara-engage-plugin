@@ -1,0 +1,67 @@
+type container_anderspink_api {
+    id: Int!
+    api_key(format: core_format!): String!
+    team_name(format: core_format!): String!
+    timecreated: String!
+    timemodified: String!
+}
+
+type container_anderspink_api_interactor {
+    anderspink_id: Int!
+    user: core_user!
+    can_update: Boolean!
+    can_delete: Boolean!
+    can_create: Boolean!
+}
+
+type container_anderspink_bridge_connection {
+    workspaceid: Int!
+    workspace_name: String!
+    teamid: Int!
+    team_name: String!
+    type_name: String!
+    bridge_type: String!
+    id: Int!
+}
+
+extend type Query {
+    container_anderspink_get_api(
+        id: param_integer
+    ): container_anderspink_api!
+
+    container_anderspink_get_apis: [container_anderspink_api!]!
+
+    container_anderspink_get_workspace_briefing_bridge(
+       id: param_integer
+    ): container_anderspink_bridge_connection!
+
+    container_anderspink_get_workspace_briefing_bridges: [container_anderspink_bridge_connection!]!
+}
+
+extend type Mutation {
+    container_anderspink_add_api(
+        name: param_text!
+        key: param_text!
+    ): container_anderspink_api!
+
+    container_anderspink_update_api(
+        id: param_integer!
+        name: param_text
+        key: param_text
+    ): container_anderspink_api!
+
+    container_anderspink_delete_api(
+        id: param_integer!
+    ): Boolean!
+
+    container_anderspink_add_workspace_briefing_bridge(
+        workspaceid: param_integer!
+        teamid: param_integer!
+        bridgetype: param_text!
+        bridgeid: param_integer!
+    ): container_anderspink_bridge_connection!#
+
+    container_anderspink_delete_workspace_briefing_bridge(
+        id: param_integer!
+    ): Boolean!
+}

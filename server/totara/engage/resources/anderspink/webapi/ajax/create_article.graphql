@@ -1,0 +1,44 @@
+mutation engage_anderspink_create_article(
+    $content: param_text!
+    $name: param_text
+    $access: totara_engage_access
+    $topics: [param_integer!]
+    $shares: [totara_engage_recipient_in!]
+) {
+    article: engage_anderspink_create_article(
+        content: $content
+        name: $name
+        access: $access
+        topics: $topics
+        shares: $shares
+    ) {
+        __typename
+        id
+        resource {
+            __typename
+            id
+            name(format: PLAIN)
+            access
+            time
+            context_id
+            user {
+                id
+                fullname
+                profileimagealt
+                profileimageurl
+            }
+        }
+        content(format: HTML)
+        format
+        image
+        owned
+        timeview
+        topics {
+            __typename
+            id
+            value(format: PLAIN)
+        }
+        sharedbycount
+        reacted
+    }
+}

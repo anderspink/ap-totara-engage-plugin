@@ -1,0 +1,17 @@
+type container_anderspink_briefing {
+    apiid: Int!
+    team: Int!
+    name: String!
+    type: String!
+    img: String
+}
+
+extend type Query {
+    container_anderspink_get_briefing(
+        apiid: param_integer
+    ): container_anderspink_briefing
+
+    container_anderspink_get_briefings(
+        teamid: param_integer
+    ): [container_anderspink_briefing!]!
+}

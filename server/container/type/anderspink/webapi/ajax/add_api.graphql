@@ -1,0 +1,15 @@
+mutation container_anderspink_add_api(
+    $name: param_text!,
+    $key: param_text!
+) {
+    anderspink: container_anderspink_add_api(
+        name: $name,
+        key: $key
+    ) {
+        id
+        api_key(format: PLAIN)
+        team_name(format: PLAIN)
+        timecreated
+        timemodified
+    }
+}

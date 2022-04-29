@@ -1,0 +1,21 @@
+mutation container_anderspink_add_workspace_briefing_bridge(
+    $workspaceid: param_integer!
+    $teamid: param_integer!
+    $bridgetype: param_text!
+    $bridgeid: param_integer!
+) {
+    anderspink_workspace: container_anderspink_add_workspace_briefing_bridge(
+        workspaceid: $workspaceid,
+        teamid: $teamid,
+        bridgetype: $bridgetype,
+        bridgeid: $bridgeid
+    ) {
+        workspaceid
+        workspace_name
+        teamid
+        team_name
+        type_name
+        bridge_type
+        id
+    }
+}

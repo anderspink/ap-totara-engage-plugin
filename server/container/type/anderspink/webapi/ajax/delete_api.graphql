@@ -1,0 +1,3 @@
+mutation container_anderspink_delete_api($id: param_integer!){
+    container_anderspink_delete_api(id: $id)
+}

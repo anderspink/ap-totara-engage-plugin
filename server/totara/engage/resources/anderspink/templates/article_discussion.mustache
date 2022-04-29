@@ -1,0 +1,17 @@
+{{#content.name}}
+    <h3 class="bold">{{{content.name}}}</h3>
+{{/content.name}}
+{{#content.link_source}}
+  <h5>{{content.link_source}}</h5>
+{{/content.link_source}}
+{{#content.link_published}}
+  <h5>{{content.link_published}}</h5>
+{{/content.link_published}}
+<p>{{{content.summary}}}</p>
+<br/>
+<a class="text-primary col-12" href="{{content.url}}" target="_blank">{{content.visit_link}}</a>
+<br/><br/><br/>
+{{#img}}
+    {{{img}}}
+    <br/><br/>
+{{/img}}

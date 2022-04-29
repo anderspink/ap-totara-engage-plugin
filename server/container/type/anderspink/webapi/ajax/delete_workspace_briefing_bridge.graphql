@@ -1,0 +1,3 @@
+mutation container_anderspink_delete_workspace_briefing_bridge($id: param_integer!){
+    container_anderspink_delete_workspace_briefing_bridge(id: $id)
+}

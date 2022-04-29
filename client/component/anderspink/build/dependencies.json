@@ -1,0 +1,13 @@
+{
+  "dependencies": [
+    {
+      "name": "container_workspace"
+    },
+    {
+      "name": "engage_article"
+    },
+    {
+      "name": "totara_engage"
+    }
+  ]
+}

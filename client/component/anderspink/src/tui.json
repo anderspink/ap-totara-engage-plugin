@@ -1,0 +1,9 @@
+{
+  "component": "anderspink",
+  "vendor": "totara",
+  "dependencies": [
+    "container_workspace",
+    "engage_article",
+    "totara_engage"
+  ]
+}
